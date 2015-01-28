@@ -32,4 +32,19 @@ $(document).ready(function() {
       $('#main_container').html(response);
     })
   })
+
+  var $add_clash_button = $('.add_clash_button');
+
+  $add_clash_button.on('submit', function(event) {
+    event.preventDefault();
+    var $target = $(event.target);
+
+    $.ajax({
+      type: 'GET',
+      url: $target.attr('action'),
+      data: $target.serialize()
+    }).done(function(response) {
+      $target.closest('.show_game').append(response);
+    })
+  })
 });
