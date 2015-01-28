@@ -43,7 +43,6 @@ get '/clash/new' do
 end
 
 post '/clash/new' do
-  p params[:clash][:game_id]
   game = Game.find(params[:clash][:game_id])
   @group = Group.find(game.group_id)
   params[:clash][:winner] = User.find_by(name: params[:clash][:winner]).id
