@@ -27,6 +27,9 @@ get '/group/:id' do |id|
 end
 
 put '/group/:id' do |id|
+  @group = Group.find(id)
+  @group.games << Game.create(name: params[:game][:name])
+  erb :group
 end
 
 post '/game/new' do
