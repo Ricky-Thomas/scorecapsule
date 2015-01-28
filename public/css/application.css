@@ -119,3 +119,19 @@ ul {
   font-size: 3em;
   border-bottom: 2px solid black;
 }
+
+#user_groups_ct {
+
+}
+
+.show_group {
+  width:200px;
+  border:1px solid black;
+  margin:auto;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.show_group h2 {
+  text-align: center;
+}
