@@ -8,18 +8,17 @@
     <div class="show_game">
       <h2><%= game.name %></h2>
         <% if game.clashes.empty? %>
-          <p>You haven't had any clashes yet!</p>
+          <p>Keep track of each Game you play here!</p>
+          <div class="clash_ct">
+          </div>
           <form action="/clash/new" method="GET" class="add_clash_button">
             <input type="hidden" name="game[id]" value="<%= game.id %>">
             <input type="submit" value="Add Clash">
           </form>
         <% else %>
-          <ul>
-            <% game.clashes.each do |clash| %>
-              <span>Clash Date: </span>
-              <li>Winner: <%= clash %></li>
-            <% end %>
-          </ul>
+          <div class="clash_ct">
+            <%= erb :_clash_display, locals: {game: game} %>
+          </div>
           <form action="/clash/new" method="GET" class="add_clash_button">
             <input type="hidden" name="game[id]" value="<%= game.id %>">
             <input type="submit" value="Add Clash">
