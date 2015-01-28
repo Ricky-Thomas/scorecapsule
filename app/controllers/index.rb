@@ -14,6 +14,8 @@ post '/group/new' do
 end
 
 get '/group/:id' do |id|
+  @group = Group.find(id)
+  erb :group
 end
 
 
