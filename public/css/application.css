@@ -10,7 +10,7 @@ body {
  width: 85%;
  height: 95%;
  margin: auto;
- padding-top: 80px;
+ padding-top: 10px;
  background-color: rgb(231, 218, 196);
 }
 
@@ -109,4 +109,13 @@ ul {
 #signup_button {
   border: 1px solid rgb(184, 240, 198);
   background-color: rgb(105, 98, 82);
+}
+
+#welcome_message {
+  position:relative;
+  width:100%;
+  color:black;
+  text-align: center;
+  font-size: 3em;
+  border-bottom: 2px solid black;
 }
