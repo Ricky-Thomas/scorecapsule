@@ -1,0 +1,34 @@
+<div id="signup" style="position: fixed; opacity: 1; z-index: 11000; left: 50%; margin-left: -202px; top: 200px;">
+      <div id="signup-ct">
+        <div id="signup-header">
+          <h2>Create a new account</h2>
+          <a class="modal_close" href="#"></a>
+        </div>
+
+        <form action="/signup" method="POST">
+          <div class="txt-fld">
+            <label>Username</label>
+            <input name="user[name]" type="text">
+          </div>
+          <div class="txt-fld">
+            <label>Email address</label>
+            <input name="user[email]" type="text">
+          </div>
+          <div class="txt-fld">
+            <label>Password</label>
+            <input name="user[password]" type="password">
+          </div>
+          <div class="txt-fld">
+            <label for="">Confirm Password: </label>
+            <input name="user[password_confirmation]" type="password">
+          </div>
+          <div class="txt-fld">
+            <label for="">URL for Profile Pic: </label>
+            <input name="user[pic_url]" type="text">
+          </div>
+          <div class="btn-fld">
+            <button type="submit">Sign Up »</button>
+          </div>
+         </form>
+      </div>
+    </div>
