@@ -1,0 +1,21 @@
+<div id="login" style="position: fixed; opacity: 1; z-index: 11000; left: 50%; margin-left: -202px; top: 200px;">
+  <div id="login-ct">
+    <div id="login-header">
+      <h2>Login</h2>
+      <a class="modal_close" href="#"></a>
+    </div>
+    <form action="/login" method="POST">
+      <div class="txt-fld">
+        <label for="">Email address: </label>
+        <input name="user[email]" type="text">
+      </div>
+      <div class="txt-fld">
+        <label for="">Password: </label>
+        <input name="user[password]" type="password">
+      </div>
+      <div class="btn-fld">
+        <input type="submit" value="LOGIN">
+      </div>
+    </form>
+  </div>
+</div>
