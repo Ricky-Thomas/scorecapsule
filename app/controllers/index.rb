@@ -30,10 +30,14 @@ get '/group/:id' do |id|
   erb :group
 end
 
-put '/group/:id' do |id|
-  @group = Group.find(id)
-  @group.games << Game.create(name: params[:game][:name])
-  erb :group
+post '/group/:id' do |id|
+  if request.xhr?
+    @group = Group.find(id)
+    @group.games << Game.create(name: params[:game][:name])
+    erb :group
+  else
+    redirect "/group/#{id}"
+  end
 end
 
 post '/game/new' do
