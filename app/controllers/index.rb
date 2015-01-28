@@ -26,6 +26,9 @@ get '/group/:id' do |id|
   erb :group
 end
 
+put '/group/:id' do |id|
+end
+
 post '/game/new' do
 end
 
