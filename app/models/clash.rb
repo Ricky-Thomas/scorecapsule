@@ -14,6 +14,10 @@ class Clash < ActiveRecord::Base
   end
 
   def date
+    month = self.created_at.month
+    day   = self.created_at.day
+    year  = self.created_at.year
+    "#{month}/#{day}/#{year}"
   end
 
   def current_user_won?
