@@ -3,6 +3,11 @@ $(document).ready(function() {
   $("#go_login").leanModal({ top : 200, overlay : 0.4, closeButton: ".modal_close" })
   $("#go_signup").leanModal({ top : 200, overlay : 0.4, closeButton: ".modal_close" })
 
+  $('#new_group_link').on('click', function(event){
+    event.preventDefault();
+    $('#create_group_form').toggle();
+  });
+
   var $add_game_button = $('#add_game_button');
 
   $add_game_button.on('submit', function(event) {
