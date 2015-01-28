@@ -22,7 +22,7 @@
 
   <div id="header">
     <span style="float: left;"><a href="/">ScoreCapsule</a></span>
-    <span style="float: right;">
+    <span style="float: right; padding-right: 2em">
       <% if current_user %>
         <a href="/user/<%= current_user.id%>"><%= current_user.name %></a> | <a href="/signout">Logout</a>
       <% else %>
