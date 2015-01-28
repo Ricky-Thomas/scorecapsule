@@ -3,7 +3,7 @@ post '/login' do
 
   if @user.try(:authenticate, params[:user][:password])
     session[:user_id] = @user.id
-    redirect "/"
+    redirect "/user/#{@user.id}"
   end
   set_error('Login Failed, Please Try Again')
   redirect "/"
@@ -13,7 +13,7 @@ post '/signup' do
   user = User.create(params[:user])
   if user.valid?
     session[:user_id] = user.id
-    redirect "/"
+    redirect "/user/#{current_user.id}"
   else
     set_error('Signup failed, Please Try Again')
     redirect "/"
