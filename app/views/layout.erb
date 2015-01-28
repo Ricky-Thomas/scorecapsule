@@ -21,7 +21,16 @@
 <body>
 
   <div id="header">
-    <p>This is the header</p>
+    <span style="float: left;"><a href="/">ScoreCapsule</a></span>
+    <span style="float: right;">
+      <% if current_user %>
+        <a href="/user/<%= current_user.id%>"><%= current_user.name %></a> | <a href="/signout">Logout</a>
+      <% else %>
+        <a id="go_login" rel="leanModal" href="#login">Login</a>
+        |
+        <a id="go_signup" rel="leanModal" name="signup" href="#signup" align="right">SignUp</a>
+      <% end %>
+    </span>
   </div>
 
   <div id="main_container">
