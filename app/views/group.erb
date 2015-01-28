@@ -23,7 +23,7 @@
       <% end %>
     </div>
   <% end %>
-    <form action="/game/new" method="POST" class="add_game_button">
+    <form action="/game/new" method="POST" id="add_game_button">
       <input type="hidden" name="group[id]" value="<%= @group.id %>">
       <input type="submit" value="Add Game">
     </form>
