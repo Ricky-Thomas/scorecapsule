@@ -1,3 +1,16 @@
 <div id="welcome_message">
   <h1>Sup <%= current_user.name.capitalize %>!</h1>
 </div>
+
+<div id="user_groups_ct">
+  <% @groups.each do |group| %>
+    <div class="show_group">
+      <h2><%= group.name %></h2>
+      <ul>
+      <% group.users.each do |user| %>
+        <li><%= user.name %></li>
+      <% end %>
+    </ul>
+    </div>
+  <% end %>
+</div>
