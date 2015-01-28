@@ -116,12 +116,12 @@ ul {
   width:100%;
   color:black;
   text-align: center;
-  font-size: 3em;
+  font-size: 2em;
   border-bottom: 2px solid black;
 }
 
-#user_groups_ct {
-
+#user_groups_ct a {
+  text-decoration: none;
 }
 
 .show_group {
@@ -134,4 +134,10 @@ ul {
 
 .show_group h2 {
   text-align: center;
+}
+
+#create_group_form input {
+  clear:both;
+  padding: 5px;
+  margin:5px;
 }
