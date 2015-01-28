@@ -1,0 +1,8 @@
+<div id="create_game_form">
+  <form action="/group/<%= group.id %>" method="POST">
+    <input type="hidden" name="_method" value="PUT">
+    <label>What game ya playin?</label>
+    <input type="text" name="game[name]" placeholder="e.g. Scrabble"><br>
+    <input type="submit">
+  </form>
+</div>
