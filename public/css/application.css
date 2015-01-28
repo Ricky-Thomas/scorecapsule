@@ -141,3 +141,28 @@ ul {
   padding: 5px;
   margin:5px;
 }
+
+#group_name {
+  float:right;
+}
+
+#group_games_ct {
+  clear:both;
+  position:relative;
+  margin:auto;
+  width:80%;
+  border-radius: 5px;
+  border:2px solid black;
+  overflow:auto;
+}
+
+.show_game {
+  position:relative;
+  width:75%;
+  border-radius: 5px;
+  border:2px solid black;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow: auto;
+}
