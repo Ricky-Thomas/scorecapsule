@@ -1,0 +1,12 @@
+<div id="create_game_form">
+  <form action="/clash/new" method="POST">
+    <label>Who won?</label>
+    <input type="text" name="clash[winner]" placeholder="Winner Username"><br>
+    <label>Who came in second?</label>
+    <input type="text" name="clash[runner_up]" placeholder="2nd Username"><br>
+    <label>Who was a fool?</label>
+    <input type="text" name="clash[fool]" placeholder="Fool Username"><br>
+    <input type="hidden" name="clash[game_id]" value="<%= game.id %>">
+    <input type="submit">
+  </form>
+</div>
