@@ -166,3 +166,9 @@ ul {
   margin-bottom: 20px;
   overflow: auto;
 }
+
+#create_game_form input {
+  clear:both;
+  padding: 5px;
+  margin:5px;
+}
