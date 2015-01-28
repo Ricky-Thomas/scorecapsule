@@ -1,0 +1,9 @@
+<% if current_user %>
+  <% redirect "/" %>
+<% else %>
+
+<%= erb :'auth/signup' %>
+
+<%= erb :'auth/login' %>
+
+<% end %>
