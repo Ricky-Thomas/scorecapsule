@@ -8,6 +8,8 @@ get '/user/:id' do
 end
 
 get '/group/new' do
+  @current_user = User.find(current_user.id)
+  erb :create_group_form
 end
 
 post '/group/new' do
