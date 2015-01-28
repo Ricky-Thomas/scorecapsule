@@ -119,6 +119,7 @@ ul {
   text-align: center;
   font-size: 2em;
   border-bottom: 2px solid black;
+  overflow:auto;
 }
 
 #user_groups_ct a {
@@ -135,6 +136,12 @@ ul {
 
 .show_group h2 {
   text-align: center;
+}
+
+#create_group_form {
+  width:500px;
+  padding: 5px;
+  margin:auto;
 }
 
 #create_group_form input {
