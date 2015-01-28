@@ -37,6 +37,9 @@ post '/game/new' do
   erb :_create_game_form, locals: {group: group}, layout: false
 end
 
+get '/clash/new' do
+end
 
-
+post '/clash/new' do
+end
 
