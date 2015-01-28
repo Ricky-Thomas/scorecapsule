@@ -13,6 +13,12 @@ get '/group/new' do
 end
 
 post '/group/new' do
+  @current_user = User.find(current_user.id)
+  new_group = Group.create(name: params[:group][:name])
+  @current_user.groups << new_group
+  friend = User.find_by(email: params[:user_group][:email])
+  friend.groups << new_group
+  redirect "user/#{current_user.id}"
 end
 
 get '/group/:id' do |id|
