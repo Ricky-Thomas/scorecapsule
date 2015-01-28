@@ -47,4 +47,19 @@ $(document).ready(function() {
       $target.closest('.show_game').append(response);
     })
   })
+
+  var $create_clash_form = $('#create_game_form');
+
+  $create_clash_form.on('submit', function(event) {
+    event.preventDefault();
+    var $target = $(event.target);
+
+    $.ajax({
+      type: 'POST',
+      url: $target.attr('action'),
+      data: $target.serialize()
+    }).done(function(response) {
+      $('#main_container').html(response);
+    })
+  })
 });
