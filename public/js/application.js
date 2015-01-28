@@ -43,12 +43,12 @@ $(document).ready(function() {
       data: $target.serialize()
     }).done(function(response) {
       $target.closest('.show_game').append(response);
-    })
-  })
+    });
+  });
 
-  var $create_clash_form = $('#create_game_form');
 
-  $create_clash_form.on('submit', function(event) {
+
+  $('#group_games_ct').on('submit', "#create_clash", function(event) {
     event.preventDefault();
     var $target = $(event.target);
 
@@ -57,7 +57,9 @@ $(document).ready(function() {
       url: $target.attr('action'),
       data: $target.serialize()
     }).done(function(response) {
-      $('#main_container').html(response);
-    })
-  })
+      $target.closest('.show_game').children(".clash_ct").html("");
+      $target.closest('.show_game').children(".clash_ct").html(response);
+      $target.html("");
+    });
+  });
 });
