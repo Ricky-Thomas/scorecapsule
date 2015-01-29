@@ -1,7 +1,11 @@
 <% if current_user %>
   <% redirect "/" %>
 <% else %>
-
+<div id="intro">
+  <h1>Welcome</h1>
+  <h1>to</h1>
+  <h1>ScoreCapsule</h1>
+</div>
 <%= erb :'auth/signup' %>
 
 <%= erb :'auth/login' %>

@@ -195,3 +195,10 @@ ul {
   margin-left: 10%;
   overflow: auto;
 }
+
+#intro {
+  position:relative;
+  margin:auto;
+  font-size: 3em;
+  text-align: center
+}
