@@ -1,5 +1,11 @@
 <div id="group_name">
   <h1><%= @group.name.capitalize %></h1>
+  <span>Members Include:</span>
+  <ul>
+    <% @group.users.each do |user| %>
+      <li><%= user.name %></li>
+    <% end %>
+  </ul>
 </div>
 
 <div id="group_games_ct">
