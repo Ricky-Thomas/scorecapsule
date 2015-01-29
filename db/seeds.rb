@@ -12,3 +12,5 @@
   UserGroup.create(user: user, group: group)
   group.games << Game.create(name: Faker::Lorem.word)
 }
+
+User.create(name: "Ricky", email: "rickythomas.rt@gmail.com", password: "password")
