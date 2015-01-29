@@ -22,6 +22,12 @@
             <input type="submit" value="Add Clash">
           </form>
         <% else %>
+          <% if current_user.id == game.leader %>
+            <p>You are the current game leader!</p>
+          <% else %>
+            <p><%= User.find(game.leader).name %>, is the current leader!</p>
+            <p>You... are most likely a fool</p>
+          <% end %>
           <div class="clash_ct">
             <%= erb :_clash_display, locals: {game: game} %>
           </div>
