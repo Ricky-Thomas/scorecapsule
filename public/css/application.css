@@ -8,10 +8,12 @@ body {
 #main_container {
  position:relative;
  width: 85%;
- height: 95%;
+ height: auto;
  margin: auto;
- padding-top: 80px;
+ padding-top: 10px;
  background-color: rgb(231, 218, 196);
+ padding-bottom: 50px;
+ margin-top: 50px;
 }
 
 #header {
@@ -109,4 +111,87 @@ ul {
 #signup_button {
   border: 1px solid rgb(184, 240, 198);
   background-color: rgb(105, 98, 82);
+}
+
+#welcome_message {
+  position:relative;
+  width:100%;
+  color:black;
+  text-align: center;
+  font-size: 2em;
+  border-bottom: 2px solid black;
+  overflow:auto;
+}
+
+#user_groups_ct a {
+  text-decoration: none;
+}
+
+.show_group {
+  width:200px;
+  border:1px solid black;
+  margin:auto;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.show_group h2 {
+  text-align: center;
+}
+
+#create_group_form {
+  width:500px;
+  padding: 5px;
+  margin:auto;
+}
+
+#create_group_form input {
+  clear:both;
+  padding: 5px;
+  margin:5px;
+}
+
+#group_name {
+  float:right;
+}
+
+#group_games_ct {
+  clear:both;
+  position:relative;
+  margin:auto;
+  width:80%;
+  border-radius: 5px;
+  border:2px solid black;
+  overflow:auto;
+  margin-bottom: 50px;
+}
+
+.show_game {
+  position:relative;
+  width:75%;
+  border-radius: 5px;
+  border:2px solid black;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow: auto;
+}
+
+#create_game_form input {
+  clear:both;
+  padding: 5px;
+  margin:5px;
+}
+
+.show_clash {
+  position:relative;
+  display:inline-block;
+  width:35%;
+  border-radius: 5px;
+  border:2px solid black;
+  /* margin: auto; */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10%;
+  overflow: auto;
 }

@@ -24,7 +24,7 @@
     <span style="float: left;"><a href="/">ScoreCapsule</a></span>
     <span style="float: right; padding-right: 2em">
       <% if current_user %>
-        <a href="/user/<%= current_user.id%>"><%= current_user.name %></a> | <a href="/signout">Logout</a>
+        <a href="/user/<%= current_user.id%>"><%= current_user.name %></a> | <a href="/logout">Logout</a>
       <% else %>
         <a id="go_login" rel="leanModal" href="#login">Login</a>
         |

@@ -1,0 +1,18 @@
+<div id="welcome_message">
+  <h1>Sup <%= current_user.name.capitalize %>!?</h1>
+  <h2>Check out your groups, or <a href="/group/new" id="new_group_link">create a new one</a></h2>
+  <%= erb :create_group_form %>
+</div>
+
+<div id="user_groups_ct">
+  <% @groups.each do |group| %>
+    <a href="/group/<%= group.id %>"><div class="show_group">
+      <h2><%= group.name %></h2>
+      <ul>
+      <% group.users.each do |user| %>
+        <li><%= user.name %></li>
+      <% end %>
+    </ul>
+    </div></a>
+  <% end %>
+</div>

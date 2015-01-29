@@ -1,0 +1,10 @@
+<% game.clashes.each do |clash| %>
+  <div class="show_clash">
+    <ul>
+      <span>Clash Date: <%= clash.date %></span>
+      <li>Winner: <%= clash.winner_name %></li>
+      <li>Runner Up: <%= clash.runner_up_name %></li>
+      <li>Fool: <%= clash.fool_name %></li>
+    </ul>
+  </div>
+<% end %>

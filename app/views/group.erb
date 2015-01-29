@@ -1,0 +1,46 @@
+<div id="group_name">
+  <h1><%= @group.name.capitalize %></h1>
+  <span>Members Include:</span>
+  <ul>
+    <% @group.users.each do |user| %>
+      <li><%= user.name %></li>
+    <% end %>
+  </ul>
+</div>
+
+<div id="group_games_ct">
+  <h1>Games</h1>
+  <% @group.games.each do |game| %>
+    <div class="show_game">
+      <h2><%= game.name %></h2>
+        <% if game.clashes.empty? %>
+          <p>Keep track of each Game you play here!</p>
+          <div class="clash_ct">
+          </div>
+          <form action="/clash/new" method="GET" class="add_clash_button">
+            <input type="hidden" name="game[id]" value="<%= game.id %>">
+            <input type="submit" value="Add Clash">
+          </form>
+        <% else %>
+          <% if current_user.id == game.leader %>
+            <p>You are the current game leader!</p>
+          <% else %>
+            <p><%= User.find(game.leader).name %>, is the current leader!</p>
+            <p>You... are most likely a fool</p>
+          <% end %>
+          <div class="clash_ct">
+            <%= erb :_clash_display, locals: {game: game} %>
+          </div>
+          <form action="/clash/new" method="GET" class="add_clash_button">
+            <input type="hidden" name="game[id]" value="<%= game.id %>">
+            <input type="submit" value="Add Clash">
+          </form>
+        <% end %>
+    </div>
+  <% end %>
+
+    <form action="/game/new" method="POST" id="add_game_button">
+      <input type="hidden" name="group[id]" value="<%= @group.id %>">
+      <input type="submit" value="Add Game">
+    </form>
+</div>
