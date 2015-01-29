@@ -57,6 +57,7 @@ post '/clash/new' do
   params[:clash][:runner_up] = User.find_by(name: params[:clash][:runner_up]).id
   params[:clash][:fool] = User.find_by(name: params[:clash][:fool]).id
   clash = Clash.create(params[:clash])
+  game.set_leader
   erb :_clash_display, locals: {clash: clash, game: game}, layout: false
 end
 
