@@ -24,6 +24,8 @@
         <% else %>
           <% if current_user.id == game.leader %>
             <p>You are the current game leader!</p>
+            <%= erb :_smacktalk_form, locals: {game: @game} %>
+            <button class="talk_smack">Talk Smack!</button>
           <% else %>
             <p><%= User.find(game.leader).name %>, is the current leader!</p>
             <p>You... are most likely a fool</p>

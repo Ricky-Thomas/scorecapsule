@@ -20,7 +20,4 @@ class Clash < ActiveRecord::Base
     "#{month}/#{day}/#{year}"
   end
 
-  def current_user_won?
-  end
-
 end
