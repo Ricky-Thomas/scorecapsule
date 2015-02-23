@@ -8,6 +8,12 @@ $(document).ready(function() {
     $('#create_group_form').toggle();
   });
 
+  $('.talk_smack').on('click', function(event){
+    var $target = $(event.target);
+    console.log("I don't work! I'm a bug that needs fixing!");
+    $target.closest('.smacktalk_ct').toggle();
+  });
+
   var $add_game_button = $('#add_game_button');
 
   $add_game_button.on('submit', function(event) {
